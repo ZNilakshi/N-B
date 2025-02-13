@@ -1,161 +1,152 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import Layout from "../components/Layout";
+import TestimonialSection from "../components/TestimonialSection";
+import Footer from "../components/Footer";
 
-const Home = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Navigation, Pagination } from "swiper/modules";
 
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= 768);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
+const AboutUs = () => {
   return (
-    <div>
-      <div
-        style={{
-          backgroundImage: "url('home.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          height: "100vh",
-          color: "white",
-          textAlign: "center",
-          padding: "20px",
-          position: "relative",
-        }}
-      >
-        {/* Content Container */}
-        <div style={{ position: "relative", zIndex: 1 }}>
-          {/* Logo */}
-          <img
-            src="logo.png"
-            alt="Company Logo"
-            style={{ width: "150px", height: "auto", marginBottom: "10px" }}
-          />
+    <div style={{ padding: "20px", backgroundColor: "#f3f4f6" }}>
+      <Layout>
+        <h1 style={{ fontSize: "50px", fontWeight: "bold", textAlign: "center" }}>
+          About Us
+        </h1>
+        <p style={{ fontSize: "22px", margin: "20px 0", textAlign: "center" }}>
+          We provide luxury chauffeur services with high-quality vehicles and professional drivers.
+        </p>
+      </Layout>
 
-          {/* Navigation Menu */}
-          {!isMobile ? (
-            <nav style={styles.navbarDesktop}>
-              <a href="/" style={styles.navItem}>HOME</a>
-              <a href="/about" style={styles.navItem}>ABOUT US</a>
-              <a href="/fleet" style={styles.navItem}>OUR FLEET</a>
-              <a href="/reservation" style={styles.navItem}>RESERVATION</a>
-              <a href="/contact" style={styles.navItem}>CONTACT US</a>
-            </nav>
-          ) : (
-            <>
-              <div style={styles.menuIcon} onClick={() => setMenuOpen(!menuOpen)}>
-                ☰
-              </div>
-              {menuOpen && (
-                <nav style={styles.navbarMobile}>
-                  <a href="/" style={styles.navItem}>HOME</a>
-                  <a href="/AboutUs" style={styles.navItem}>ABOUT US</a>
-                  <a href="/fleet" style={styles.navItem}>OUR FLEET</a>
-                  <a href="/reservation" style={styles.navItem}>RESERVATION</a>
-                  <a href="/contact" style={styles.navItem}>CONTACT US</a>
-                </nav>
-              )}
-            </>
-          )}
+      <h1 style={{ fontSize: "36px", fontWeight: "bold", textAlign: "center" }}>
+        <span style={{ color: "#facc15" }}>For the past 25 years</span> we have provided service{" "}
+        <span style={{ color: "#1e3a8a" }}>that is incomparable.</span>
+      </h1>
 
-          <h1 style={{ fontSize: "40px", fontWeight: "bold" }}>
-            CHAUFFEURED TRANSPORTATION LIKE NO OTHER
-          </h1>
-          <p style={{ fontSize: "22px", margin: "20px 0" }}>
-            Professional Chauffeurs, Luxury Vehicles, and the most personalized service in the industry
-          </p>
-          <div>
-            <button style={styles.button}>Reserve Transportation</button>
-          </div>
-        </div>
+      <p style={{ fontSize: "18px", textAlign: "center", marginTop: "20px", color: "#4b5563" }}>
+        Anybody can take you from point A to point B. But we create amazing transportation experiences.
+      </p>
+
+      {/* Swiper Section */}
+      <div style={{ position: "relative", width: "100%", maxWidth: "100%" }}>
+        <Swiper
+          spaceBetween={20}
+          slidesPerView={1}
+          pagination={{ clickable: true }}
+          navigation={true} // Enables arrows
+          breakpoints={{
+            768: { slidesPerView: 3 }, // Show 3 columns on larger screens
+          }}
+          modules={[Pagination, Navigation]}
+          style={{ paddingBottom: "20px" , "--swiper-navigation-color": "#99001c" , "--swiper-theme-color": "#99001c"}}
+        >
+          {/* Column 1 */}
+          <SwiperSlide>
+            <div style={{
+              backgroundColor: "#fff",
+              padding: "20px",
+              boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+              borderRadius: "10px",
+              maxWidth: "350px",
+              textAlign: "center",
+              margin: "auto",
+            }}>
+              <h2 style={{ fontSize: "20px", fontWeight: "bold" }}>Wall Street Transportation & Limousine Company</h2>
+              <p style={{ marginTop: "10px", color: "#4b5563" }}>
+                A full-service transportation company catering to the individual needs of our clients.
+                We provide transportation worldwide. Our fleet consists of:
+              </p>
+              <ul style={{ marginTop: "10px", paddingLeft: "20px", textAlign: "left", color: "#374151" }}>
+                <li>Late model Lincoln Town Cars</li>
+                <li>Limousines (6, 10 & 20 passengers)</li>
+                <li>Luxury SUVs, Vans, Minibuses</li>
+                <li>55-passenger Motor Coaches</li>
+              </ul>
+            </div>
+          </SwiperSlide>
+
+          {/* Column 2 */}
+          <SwiperSlide>
+            <div style={{
+              backgroundColor: "#fff",
+              padding: "20px",
+              boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+              borderRadius: "10px",
+              maxWidth: "350px",
+              textAlign: "center",
+              margin: "auto",
+            }}>
+              <h2 style={{ fontSize: "20px", fontWeight: "bold" }}>World Wide Ground Transportation</h2>
+              <p style={{ marginTop: "10px", color: "#4b5563" }}>
+                We provide easy one-stop reservations with centralized billing.
+              </p>
+              <p style={{ marginTop: "10px", color: "#4b5563" }}>
+                Our staff consists of <strong>extensively trained, professional, uniformed chauffeurs.</strong>
+                Background checks and drug screenings ensure passenger safety.
+              </p>
+              <p style={{ marginTop: "10px", color: "#4b5563" }}>
+                We also offer chauffeurs speaking Spanish, Italian, Arabic, Korean, Russian, and Creole.
+              </p>
+            </div>
+          </SwiperSlide>
+
+          {/* Column 3 */}
+          <SwiperSlide>
+            <div style={{
+              backgroundColor: "#fff",
+              padding: "20px",
+              boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+              borderRadius: "10px",
+              maxWidth: "350px",
+              textAlign: "center",
+              margin: "auto",
+            }}>
+              <h2 style={{ fontSize: "20px", fontWeight: "bold" }}>Individual Customized Service</h2>
+              <p style={{ marginTop: "10px", color: "#4b5563" }}>
+                We take pride in offering <strong>individual customized service</strong>, ensuring flexibility and efficiency.
+              </p>
+              <p style={{ marginTop: "10px", color: "#4b5563" }}>
+                <strong>We create profiles</strong> of each customer's preferences, including favorite beverages (coffee, cappuccino, tea, juice, soda, etc.).
+              </p>
+              <p style={{ marginTop: "10px", fontStyle: "italic", color: "#4b5563" }}>
+                "Our commitment to our customers is to provide customized, timely, courteous, professional service in highly maintained safe vehicles."
+              </p>
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
 
-     
+      {/* Centered Images */}
+      <div style={{ display: "flex", justifyContent: "center", gap: "10px", marginTop: "10px" }}>
+        <img 
+          src="home.jpg" 
+          alt="Luxury Experience" 
+          style={{ width: "45%", borderRadius: "10px" }} 
+        />
+        <img 
+          src="home.jpg" 
+          alt="Luxury Experience" 
+          style={{ width: "45%", borderRadius: "10px" }} 
+        />
+      </div>
+
+      <p style={{ fontSize: "18px", textAlign: "center", marginTop: "20px", color: "#4b5563" }}>
+        On-time, courteous chauffeurs, personalized service, and stunning vehicles. That is what you can expect.
+      </p>
+<div>
+<TestimonialSection />
+</div>
+<div>
+<Footer />
+</div>
+      
     </div>
+    
+    
   );
 };
 
-const styles = {
-  menuIcon: {
-    fontSize: "30px",
-    color: "white",
-    cursor: "pointer",
-    position: "absolute",
-    top: "15px",
-    right: "20px",
-  },
-  navbarMobile: {
-    flexDirection: "column",
-    position: "absolute",
-    top: "50px",
-    right: "20px",
-    backgroundColor: "#99001c",
-    borderRadius: "5px",
-    padding: "10px",
-    width: "200px",
-    display: "flex",
-  },
-  navbarDesktop: {
-    display: "flex",
-    justifyContent: "center",
-    gap: "20px",
-    position: "absolute",
-    top: "105px",
-    left: "50%",
-    transform: "translateX(-50%)",
-  },
-  navItem: {
-    color: "white",
-    textDecoration: "none",
-    padding: "10px",
-    fontSize: "18px",
-    fontWeight: "bold",
-    transition: "background 0.3s ease",
-  },
-  container: {
-    backgroundColor: "#99001c",
-    textAlign: "center",
-    padding: "50px 20px",
-  },
-  header: {
-    fontSize: "32px",
-    fontWeight: "bold",
-    color: "white",
-  },
-  subHeader: {
-    fontSize: "30px",
-    fontWeight: "bold",
-    color: "white",
-  },
-  contactContainer: {
-    display: "flex",
-    justifyContent: "center",
-    marginTop: "20px",
-  },
-  phone: {
-    fontSize: "18px",
-    color: "#99001c",
-    backgroundColor: "white",
-    padding: "10px 15px",
-    borderRadius: "5px",
-    fontWeight: "bold",
-    cursor: "pointer",
-  },
-  link: {
-    textDecoration: "none",
-    fontWeight: "bold",
-    color: "#99001c",
-  },
-  button: {
-    backgroundColor: "#99001c",
-    color: "white",
-    padding: "13px 20px",
-    border: "none",
-    borderRadius: "5px",
-    cursor: "pointer",
-    fontSize: "16px",
-  },
-};
-
-export default Home;
+export default AboutUs;

@@ -1,64 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { } from "react";
+import Layout from "../components/Layout";
+import SelectYourCar from "../components/SelectYourCar";
+import About from "../components/About";
+import Footer from "../components/Footer";
 
 const Home = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= 768);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+ 
 
   return (
     <div>
-      <div
-        style={{
-          backgroundImage: "url('home.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          height: "100vh",
-          color: "white",
-          textAlign: "center",
-          padding: "20px",
-          position: "relative",
-        }}
-      >
-        {/* Content Container */}
-        <div style={{ position: "relative", zIndex: 1 }}>
-          {/* Logo */}
-          <img
-            src="logo.png"
-            alt="Company Logo"
-            style={{ width: "150px", height: "auto", marginBottom: "10px" }}
-          />
+      
+      
 
-          {/* Navigation Menu */}
-          {!isMobile ? (
-            <nav style={styles.navbarDesktop}>
-              <a href="/" style={styles.navItem}>HOME</a>
-              <a href="/about" style={styles.navItem}>ABOUT US</a>
-              <a href="/fleet" style={styles.navItem}>OUR FLEET</a>
-              <a href="/reservation" style={styles.navItem}>RESERVATION</a>
-              <a href="/contact" style={styles.navItem}>CONTACT US</a>
-            </nav>
-          ) : (
-            <>
-              <div style={styles.menuIcon} onClick={() => setMenuOpen(!menuOpen)}>
-                ☰
-              </div>
-              {menuOpen && (
-                <nav style={styles.navbarMobile}>
-                  <a href="/" style={styles.navItem}>HOME</a>
-                  <a href="/AboutUs" style={styles.navItem}>ABOUT US</a>
-                  <a href="/fleet" style={styles.navItem}>OUR FLEET</a>
-                  <a href="/reservation" style={styles.navItem}>RESERVATION</a>
-                  <a href="/contact" style={styles.navItem}>CONTACT US</a>
-                </nav>
-              )}
-            </>
-          )}
-
+         
+           
+<Layout>
           <h1 style={{ fontSize: "40px", fontWeight: "bold" }}>
             CHAUFFEURED TRANSPORTATION LIKE NO OTHER
           </h1>
@@ -68,10 +24,9 @@ const Home = () => {
           <div>
             <button style={styles.button}>Reserve Transportation</button>
           </div>
-        </div>
-      </div>
+          </Layout>
 
-      {/* Contact Section */}
+             
       <div style={styles.container}>
         <h2 style={styles.header}>PREFER TO SPEAK TO SOMEONE?</h2>
         <p style={styles.subHeader}>Call now for a reservation specialist!</p>
@@ -83,47 +38,22 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </div>
+      <div >
+        <SelectYourCar/>
+        <About />
+        <Footer />
+      </div>
+        </div>
+     
+     
+   
+   
   );
 };
 
 const styles = {
-  menuIcon: {
-    fontSize: "30px",
-    color: "white",
-    cursor: "pointer",
-    position: "absolute",
-    top: "15px",
-    right: "20px",
-  },
-  navbarMobile: {
-    flexDirection: "column",
-    position: "absolute",
-    top: "50px",
-    right: "20px",
-    backgroundColor: "#99001c",
-    borderRadius: "5px",
-    padding: "10px",
-    width: "200px",
-    display: "flex",
-  },
-  navbarDesktop: {
-    display: "flex",
-    justifyContent: "center",
-    gap: "20px",
-    position: "absolute",
-    top: "105px",
-    left: "50%",
-    transform: "translateX(-50%)",
-  },
-  navItem: {
-    color: "white",
-    textDecoration: "none",
-    padding: "10px",
-    fontSize: "18px",
-    fontWeight: "bold",
-    transition: "background 0.3s ease",
-  },
+ 
+  
   container: {
     backgroundColor: "#99001c",
     textAlign: "center",
