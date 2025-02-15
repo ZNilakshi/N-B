@@ -31,12 +31,12 @@ const AboutUs = () => {
 
         {/* Services Section */}
         {[
-          { icon: "✈️", title: "Airport Transportation", desc: "Airport Transfers, Port Transfers, Airport Pickups." },
-          { icon: "🏢", title: "Corporate Transportation", desc: "Conventions, work functions, executive meetings." },
+          { icon: "✈️", title: "Airport Transportation", desc: "Airport Transfers, Port Transfers, Airport Pickups" },
+          { icon: "🏢", title: "Corporate Transportation", desc: "Conventions, work functions, executive meetings" },
           {
             icon: "🎉",
             title: "Special Events",
-            desc: "Weddings, Sporting Events, Red Carpet Events, Concerts, Bachelor/Bachelorette Parties.",
+            desc: "Weddings, Sporting Events, Red Carpet Events, Concerts, Bachelor/Bachelorette Parties",
           },
         ].map((service, index) => (
           <div
