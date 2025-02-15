@@ -11,7 +11,7 @@ import { Navigation, Pagination } from "swiper/modules";
 
 const AboutUs = () => {
   return (
-    <div style={{ padding: "20px", backgroundColor: "#f3f4f6" }}>
+    <div style={{  backgroundColor: "#f3f4f6" }}>
       <Layout>
         <h1 style={{ fontSize: "50px", fontWeight: "bold", textAlign: "center" }}>
           About Us
