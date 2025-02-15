@@ -145,7 +145,7 @@ const RideBookingForm = () => {
   };
 
   return (
-    <div style={{  maxWidth: "83%", margin: "auto", padding: "16px", backgroundColor: "white", boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)", borderRadius: "8px" }}>
+    <div style={{  maxWidth: "85%", margin: "auto", padding: "10px", backgroundColor: "white", boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)", borderRadius: "8px" }}>
      
 
 {/* Step 1: Ride Info */}
@@ -153,7 +153,7 @@ const RideBookingForm = () => {
   <>
    {/* Steps Navigation */}
 <ul style={{ listStyleType: "none", padding: 0, display: "flex", gap: "10px", marginBottom: "20px" }}>
-  <li style={{ display: "flex", fontSize: "18px", alignItems: "center", gap: "5px" ,fontWeight: "bold" }}>
+  <li style={{ display: "flex", fontSize: "22px", alignItems: "center", gap: "2px" ,fontWeight: "bold" }}>
     <span style={{ width: "10px",  height: "10px", borderRadius: "50%", backgroundColor: step === 1 ? "#007bff" : "#ccc", display: "inline-block" }}></span>
     Step 1: Ride Info
   </li>
@@ -164,16 +164,16 @@ const RideBookingForm = () => {
       style={{
         display: isDesktop ? "flex" : "block",
         flexDirection: "row",
-        gap: "20px",
+        gap: "2px",
         padding: "20px",
       }}
     >
       {/* Left Side: Form Section */}
       <div style={{ width: isDesktop ? "50%" : "100%" }}>
       <div>
-        <label style={{ fontWeight: "bold" , color: "gray"}}>Select Service Type</label>
+        <label style={{ fontWeight: "bold" ,  fontSize: "19px", color: "gray"}}>Select Service Type</label>
       </div>
-    <select value={serviceType} onChange={(e) => setServiceType(e.target.value)} style={{ width: "49%", padding: "10px", marginTop: "5px", borderRadius: "6px", border: "1px solid #ccc" }}>
+    <select value={serviceType} onChange={(e) => setServiceType(e.target.value)} style={{ width: "49%", padding: "15px", marginTop: "5px", borderRadius: "6px",  fontSize: "17px",border: "1px solid #ccc" }}>
       <option value="">Select</option>
       <option>To Airport</option>
       <option>From Airport</option>
@@ -185,23 +185,23 @@ const RideBookingForm = () => {
       {errors.serviceType && <p style={{ color: "red", fontSize: "14px" }}>{errors.serviceType}</p>}
 
       <div>
-        <label style={{ fontWeight: "bold" ,color: "gray" }}>Pickup Date & Time</label>
+        <label style={{ fontWeight: "bold" ,color: "gray" , fontSize: "19px", }}>Pickup Date & Time</label>
       </div>
       <div style={{ display: "flex", gap: "10px", marginTop: "10px" }}>
-      <input type="date" value={date} onChange={(e) => setDate(e.target.value)} style={{ flex: 1, padding: "10px", borderRadius: "6px", border: "1px solid #ccc" }} />
+      <input type="date" value={date} onChange={(e) => setDate(e.target.value)} style={{ flex: 1, padding: "10px", borderRadius: "6px", border: "1px solid #ccc" ,  fontSize: "17px",}} />
       
-      <input type="time" value={time} onChange={(e) => setTime(e.target.value)} style={{ flex: 1, padding: "10px", borderRadius: "6px", border: "1px solid #ccc" }} />
+      <input type="time" value={time} onChange={(e) => setTime(e.target.value)} style={{ flex: 1, padding: "10px", borderRadius: "6px", border: "1px solid #ccc"  ,  fontSize: "17px",}} />
     </div>
     {errors.date && <p style={{ color: "red", fontSize: "14px" }}>{errors.date}</p>}
     {errors.time && <p style={{ color: "red", fontSize: "14px" }}>{errors.time}</p>}
 
-        <label style={{ fontWeight: "bold" ,color: "gray" }}>Pick-Up Location</label>
+        <label style={{ fontWeight: "bold" ,  fontSize: "19px", color: "gray" }}>Pick-Up Location</label>
         <input
           type="text"
           placeholder="Enter pick-up location"
           value={pickUp}
           onChange={(e) => handleLocationChange(e.target.value)}
-          style={{ width: "94%", padding: "10px", marginTop: "10px", borderRadius: "6px", border: "1px solid #ccc" }}
+          style={{ width: "94%", padding: "10px", marginTop: "10px", borderRadius: "6px", border: "1px solid #ccc" ,  fontSize: "17px",}}
         />
         {errors.pickUp && <p style={{ color: "red", fontSize: "14px" }}>{errors.pickUp}</p>}
 
@@ -209,7 +209,7 @@ const RideBookingForm = () => {
        
 <button
   onClick={addStop}
-  style={{ marginTop: "10px", color: "#007bff", background: "none", border: "none", cursor: "pointer", fontSize: "14px" }}
+  style={{ marginTop: "10px",fontSize: "17px", color: "#007bff", background: "none", border: "none", cursor: "pointer", fontSize: "14px" }}
 >
   + Add Stop
 </button>
@@ -234,13 +234,13 @@ const RideBookingForm = () => {
 
 
         {/* Drop-Off Location */}
-        <label style={{ fontWeight: "bold", color: "gray" , marginTop: "10px", display: "block" }}>Drop-Off Location</label>
+        <label style={{ fontWeight: "bold", color: "gray" , fontSize: "19px", marginTop: "10px", display: "block" }}>Drop-Off Location</label>
         <input
           type="text"
           placeholder="Enter drop-off location"
           value={dropOff}
           onChange={(e) => handleLocationChange(e.target.value, "dropOff")}
-          style={{ width: "94%", padding: "10px", marginTop: "10px", borderRadius: "6px", border: "1px solid #ccc" }}
+          style={{ width: "94%", padding: "10px",fontSize: "17px", marginTop: "10px", borderRadius: "6px", border: "1px solid #ccc" }}
         />
         {errors.dropOff && <p style={{ color: "red", fontSize: "14px" }}>{errors.dropOff}</p>}
       </div>
@@ -260,16 +260,16 @@ const RideBookingForm = () => {
    {/* Steps Navigation */}
 <ul style={{ listStyleType: "none", padding: 0, display: "flex", gap: "10px", marginBottom: "20px" }}>
   
-  <li style={{ display: "flex", alignItems: "center", gap: "5px" }}>
-    <span style={{ width: "12px" , fontWeight: "bold",  height: "10px", borderRadius: "50%", backgroundColor: step === 2 ? "#007bff" : "#ccc", display: "inline-block" }}></span>
+  <li style={{ display: "flex", fontSize: "22px", alignItems: "center", gap: "5px" }}>
+    <span style={{ width: "14px" , fontWeight: "bold",  height: "14px", borderRadius: "50%", backgroundColor: step === 2 ? "#007bff" : "#ccc", display: "inline-block" }}></span>
     Step 2: Select Vehicle
   </li>
   
 </ul>
 <ul style={{ listStyleType: "none", padding: 0, display: "flex", gap: "10px", marginBottom: "20px" }}>
   
-  <li style={{ display: "flex", alignItems: "center", gap: "5px" }}>
-    <span style={{ width: "12px" ,  fontWeight: "bold" , height: "10px", borderRadius: "50%", backgroundColor: step === 3 ? "#007bff" : "#ccc", display: "inline-block" }}></span>
+  <li style={{ display: "flex", fontSize: "22px", alignItems: "center", gap: "5px" }}>
+    <span style={{ width: "14px" ,  fontWeight: "bold" , height: "14px", borderRadius: "50%", backgroundColor: step === 3 ? "#007bff" : "#ccc", display: "inline-block" }}></span>
     Step 3: Final Details
   </li>
  

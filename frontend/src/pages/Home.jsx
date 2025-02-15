@@ -15,11 +15,11 @@ const Home = () => {
          
            
 <Layout>
-          <h1 style={{ fontSize: "40px", fontWeight: "bold" }}>
+          <h1 style={{ fontSize: "53px",  fontWeight: "bold"   ,}}>
           ELEVATE YOUR TRAVEL EXPERIENCE 
            </h1>
-          <p style={{ fontSize: "22px", margin: "20px 0" }}>
-          Luxury vehicles, seamless service, and a journey tailored to your comfort.  
+          <p style={{ fontSize: "23px", fontWeight: "bold", margin: "10px 0" }}>
+          Luxury Vehicles, Seamless Service, and a Journey Tailored to Your Comfort.  
           </p>
           <div>
             <button style={styles.button}>Book Your Ride</button>
@@ -60,9 +60,9 @@ const styles = {
     padding: "50px 20px",
   },
   header: {
-    fontSize: "32px",
+    fontSize: "35px",
     fontWeight: "bold",
-    color: "white",
+    color: "black",
   },
   subHeader: {
     fontSize: "30px",

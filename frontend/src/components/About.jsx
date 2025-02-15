@@ -1,114 +1,88 @@
 import React from "react";
 
 const AboutUs = () => {
-  const containerStyle = {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "center",
-    alignItems: "center",
-    padding: "50px 10%",
-    backgroundColor: "#f8f9fa",
-    fontFamily: "Arial, sans-serif",
-    color: "#333",
-  };
-
-  
-
-  const rightColumnStyle = {
-    flex: "2",
-    minWidth: "400px",
-  };
-
-  const imageStyle = {
-    maxWidth: "100%",
-    height: "500px",
-    borderRadius: "10px",
-    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
-  };
-
-  const textStyle = {
-    fontSize: "18px",
-    lineHeight: "1.6",
-    marginBottom: "20px",
-  };
-
-  const highlightStyle = {
-    fontWeight: "bold",
-  };
-
-  const serviceContainerStyle = {
-    display: "flex",
-    alignItems: "center",
-    gap: "10px",
-    marginBottom: "15px",
-  };
-
-  const iconStyle = {
-    width: "42px",
-    height: "42px",
-    backgroundColor: "#99001c",
-    borderRadius: "50%",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    fontSize: "22px",
-    fontWeight: "bold",
-    color: "black",
-  };
-
   return (
-    <div style={containerStyle}>
-      {/* Left Column - Image */}
-      
-
+    <div
+      style={{
+        backgroundImage: " url('back.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed", // Parallax Effect
+        color: "white",
+        padding: "80px 10%",
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "center",
+        alignItems: "center",
+        fontFamily: "'Poppins', sans-serif",
+      }}
+    >
       {/* Right Column - Text & Services */}
-      <div style={rightColumnStyle}>
-        <h2>A Little About Us</h2>
-        <p style={textStyle}>
-          <span style={highlightStyle}>“Nothing is more important to us</span>{" "}
-          than providing our clients with a transportation experience like no
-          other.”
-        </p>
-        <p style={textStyle}>
-          With <span style={highlightStyle}>25 years of experience</span> in the
-          transportation industry, Wall Street Transportation & Limo brings a
-          wealth of knowledge. We are equipped with the latest luxury vehicles,
-          cutting-edge technology, and VIP tracking to offer the best services.
-        </p>
+      <div
+        style={{
+          flex: "2",
+          minWidth: "350px",
+          padding: "30px",
+          borderRadius: "15px",
+          
+        }}
+      >
+        
 
         {/* Services Section */}
-        <div style={serviceContainerStyle}>
-          <div style={iconStyle}>✈️</div>
-          <div>
-            <h4>Airport Transportation</h4>
-            <p>Airport Transfers, Port Transfers, Airport Pickups.</p>
+        {[
+          { icon: "✈️", title: "Airport Transportation", desc: "Airport Transfers, Port Transfers, Airport Pickups." },
+          { icon: "🏢", title: "Corporate Transportation", desc: "Conventions, work functions, executive meetings." },
+          {
+            icon: "🎉",
+            title: "Special Events",
+            desc: "Weddings, Sporting Events, Red Carpet Events, Concerts, Bachelor/Bachelorette Parties.",
+          },
+        ].map((service, index) => (
+          <div
+            key={index}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "15px",
+              marginBottom: "20px",
+              backgroundColor: "rgba(94, 92, 92, 0.45)",
+              padding: "15px",
+              borderRadius: "12px",
+             
+              transition: "0.3s ease",
+              cursor: "pointer",
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
+            onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+          >
+            <div
+              style={{
+                width: "55px",
+                height: "55px",
+                background: "linear-gradient(135deg, rgb(124, 11, 21), rgb(175, 18, 78))",
+                borderRadius: "50%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: "24px",
+                fontWeight: "bold",
+                color: "white",
+                
+              }}
+            >
+              {service.icon}
+            </div>
+            <div>
+              <h4 style={{ fontSize: "25px", fontWeight: "bold", color: "#99001c" }}>{service.title}</h4>
+              <p style={{ fontSize: "18px" }}>{service.desc}</p>
+            </div>
           </div>
-        </div>
-
-        <div style={serviceContainerStyle}>
-          <div style={iconStyle}>🏢</div>
-          <div>
-            <h4>Corporate Transportation</h4>
-            <p>Conventions, work functions, executive meetings.</p>
-          </div>
-        </div>
-
-        <div style={serviceContainerStyle}>
-          <div style={iconStyle}>🎉</div>
-          <div>
-            <h4>Special Events</h4>
-            <p>
-              Weddings, Sporting Events, Red Carpet Events, Concerts,
-              Bachelor/Bachelorette Parties.
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
 
       {/* Second Image */}
-      <div style={{ flex: "1", marginTop: "30px" }}>
-        <img src="home.jpg" alt="Luxury Limo" style={imageStyle} />
-      </div>
+    
     </div>
   );
 };

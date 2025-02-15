@@ -16,10 +16,11 @@ const Reservation = () => {
          
            
 <Layout>
-          <h1 style={{ fontSize: "40px", fontWeight: "bold" }}>
-          Make A Reservation</h1>
-          <p style={{ fontSize: "22px", margin: "20px 0" }}>
-             </p>
+          <h1 style={{ fontSize: "55px", fontWeight: "bold" }}>
+          MAKE A RESERVATION</h1>
+          <p style={{ fontSize: "23px", margin: "20px 0" , fontWeight: "bold" }}>
+          Secure Your Ride with Ease – Book Now for a Seamless Travel Experience
+          </p>
           
           </Layout>
 

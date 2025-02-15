@@ -4,7 +4,7 @@ const Testimonials = () => {
   return (
     <div
       style={{
-        backgroundImage: "url('home.jpg')", // Change to your background image
+        backgroundImage: "url('back.png')", // Change to your background image
         backgroundSize: "cover",
         backgroundPosition: "center",
         padding: "80px 20px",
@@ -40,11 +40,12 @@ const Testimonials = () => {
             textAlign: "left",
           }}
         >
-          <span style={{ fontSize: "70x", color: "#99001c" }}>❝</span>
+          <span style={{ fontSize: "50px", color: "#99001c" }}>❝</span>
           <p>
             I just wanted to drop you a note and tell you that we were thrilled with our car service this past Friday night...
           </p>
           <p style={{ fontWeight: "bold", marginTop: "10px" }}>- Mark</p>
+             
         </div>
 
         {/* Testimonial 2 */}
@@ -57,7 +58,7 @@ const Testimonials = () => {
             textAlign: "left",
           }}
         >
-          <span style={{ fontSize: "40px", color: "#99001c" }}>❝</span>
+          <span style={{ fontSize: "50px", color: "#99001c" }}>❝</span>
           <p>
             You guys were great, thanks for your help on short notice. It was perfect. And the price was right!
           </p>
@@ -74,11 +75,11 @@ const Testimonials = () => {
             textAlign: "left",
           }}
         >
-          <span style={{ fontSize: "40px", color: "#99001c" }}>❝</span>
+          <span style={{ fontSize: "50px", color: "#99001c" }}>❝</span>
           <p>
             I had a great experience with Wall Street Limos. The driver was great and very courteous...
           </p>
-          <p style={{ fontWeight: "bold", marginTop: "10px" }}>- Customer</p>
+          <p style={{ fontWeight: "bold", marginTop: "10px" }}>- Niki</p>
         </div>
       </div>
 

@@ -16,24 +16,24 @@ const SelectYourCar = () => {
   const cars = [
     {
       name: "MKT Lincoln Town Car",
-      image: "car1.png",
+      image: "ls.png",
       description:
         "Luxury sedan for 3 passengers. Ideal for business, airport transfers, and nights out.",
-      features: ["3 Passenger Seating", "Vanity Mirrors", "USB Ports", "AC/DC plug", "Bottled water/coffee"],
+      features: ["3 Passenger Seating", "Vanity Mirrors", ],
     },
     {
       name: "Stretched Limo",
-      image: "car2.png",
+      image: "suzuki.png",
       description:
         "Luxury stretch limousines for 10 to 12 passengers. Perfect for executive and special events.",
-      features: ["Fiber Optic Lighting", "DVD/CD", "Flat Screen TV", "2 large ice chests", "Leather Seating"],
+      features: ["Fiber Optic Lighting",  "Leather Seating"],
     },
     {
       name: "15 to 20 Passenger Escalade & Hummerzines",
-      image: "car3.png",
+      image: "prius.png",
       description:
         "Party on wheels with luxury seating and entertainment options for 15-20 passengers.",
-      features: ["Fiber Optic Lighting", "DVD/CD", "Flat Screen TV", "Multiple Ice Chests", "Privacy Divider"],
+      features: ["Fiber Optic Lighting", "Privacy Divider"],
     },
   ];
 
@@ -54,8 +54,7 @@ const SelectYourCar = () => {
                 <li key={idx} style={styles.featureItem}>{feature}</li>
               ))}
             </ul>
-            <a href="/Fleet" style={styles.button}>VIEW VEHICLE</a>
-            <a href="/reservation" style={styles.button}>🚗 Reserve Now</a>
+              <a href="/reservation" style={styles.button}>🚗 Reserve Now</a>
           </div>
           <button onClick={nextCar} style={styles.arrowRight}>❯</button>
         </div>
@@ -71,8 +70,7 @@ const SelectYourCar = () => {
                   <li key={idx} style={styles.featureItem}>{feature}</li>
                 ))}
               </ul>
-              <a href="/Fleet" style={styles.button}>VIEW VEHICLE</a>
-              <a href="/reservation" style={styles.button}>🚗 Reserve Now</a>
+                   <a href="/reservation" style={styles.button}>🚗 Reserve Now</a>
             </div>
           ))}
         </div>
@@ -85,8 +83,8 @@ const SelectYourCar = () => {
 
 const styles = {
   container: {
-    backgroundColor: "#0c0e16",
-    color: "white",
+    backgroundColor: "#f3f4f6",
+    color: "black",
     fontFamily: "Arial, sans-serif",
     textAlign: "center",
     padding: "40px 0",
@@ -106,8 +104,8 @@ const styles = {
     position: "relative",
   },
   card: {
-    backgroundColor: "white",
-    color: "black",
+    background: "linear-gradient(to right,rgb(255, 255, 255),rgb(255, 255, 255))", // Modern gradient background
+   color: "black",
     borderRadius: "10px",
     textAlign: "center",
     padding: "20px",
@@ -142,7 +140,7 @@ const styles = {
   },
   arrowLeft: {
     fontSize: "30px",
-    color: "white",
+    color: "#99001c",
     cursor: "pointer",
     background: "none",
     border: "none",
@@ -150,7 +148,7 @@ const styles = {
   },
   arrowRight: {
     fontSize: "30px",
-    color: "white",
+    color: "#99001c",
     cursor: "pointer",
     background: "none",
     border: "none",

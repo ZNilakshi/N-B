@@ -13,11 +13,11 @@ const AboutUs = () => {
   return (
     <div style={{  backgroundColor: "#f3f4f6" }}>
       <Layout>
-        <h1 style={{ fontSize: "50px", fontWeight: "bold", textAlign: "center" }}>
-          About Us
+        <h1 style={{ fontSize: "55px", fontWeight: "bold", textAlign: "center" }}>
+          ABOUT US
         </h1>
-        <p style={{ fontSize: "22px", margin: "20px 0", textAlign: "center" }}>
-          We provide luxury chauffeur services with high-quality vehicles and professional drivers.
+        <p style={{ fontSize: "23x" , fontWeight: "bold", margin: "20px 0", textAlign: "center" }}>
+          We provide luxury Car services with high-quality vehicles and professional drivers.
         </p>
       </Layout>
 
@@ -54,16 +54,16 @@ const AboutUs = () => {
               textAlign: "center",
               margin: "auto",
             }}>
-              <h2 style={{ fontSize: "20px", fontWeight: "bold" }}>Wall Street Transportation & Limousine Company</h2>
+              <h2 style={{ fontSize: "20px", fontWeight: "bold" }}>N & B Taxi Services</h2>
               <p style={{ marginTop: "10px", color: "#4b5563" }}>
                 A full-service transportation company catering to the individual needs of our clients.
-                We provide transportation worldwide. Our fleet consists of:
+                 Our fleet consists of:
               </p>
               <ul style={{ marginTop: "10px", paddingLeft: "20px", textAlign: "left", color: "#374151" }}>
                 <li>Late model Lincoln Town Cars</li>
-                <li>Limousines (6, 10 & 20 passengers)</li>
+                
                 <li>Luxury SUVs, Vans, Minibuses</li>
-                <li>55-passenger Motor Coaches</li>
+                
               </ul>
             </div>
           </SwiperSlide>
@@ -79,17 +79,17 @@ const AboutUs = () => {
               textAlign: "center",
               margin: "auto",
             }}>
-              <h2 style={{ fontSize: "20px", fontWeight: "bold" }}>World Wide Ground Transportation</h2>
-              <p style={{ marginTop: "10px", color: "#4b5563" }}>
-                We provide easy one-stop reservations with centralized billing.
-              </p>
-              <p style={{ marginTop: "10px", color: "#4b5563" }}>
-                Our staff consists of <strong>extensively trained, professional, uniformed chauffeurs.</strong>
-                Background checks and drug screenings ensure passenger safety.
-              </p>
-              <p style={{ marginTop: "10px", color: "#4b5563" }}>
-                We also offer chauffeurs speaking Spanish, Italian, Arabic, Korean, Russian, and Creole.
-              </p>
+              <h2 style={{ fontSize: "20px", fontWeight: "bold" }}>Premium Airport Transfers</h2>
+<p style={{ marginTop: "10px", color: "#4b5563" }}>
+  Enjoy stress-free airport transfers with our reliable and punctual service.
+</p>
+<p style={{ marginTop: "10px", color: "#4b5563" }}>
+  Our <strong>dedicated chauffeurs track your flight in real-time</strong> to ensure timely pickups, even in case of delays.
+</p>
+<p style={{ marginTop: "10px", color: "#4b5563" }}>
+  We provide complimentary wait times, luggage assistance, and a smooth ride to your destination.
+</p>
+
             </div>
           </SwiperSlide>
 
@@ -122,18 +122,18 @@ const AboutUs = () => {
       {/* Centered Images */}
       <div style={{ display: "flex", justifyContent: "center", gap: "10px", marginTop: "10px" }}>
         <img 
-          src="home.jpg" 
+          src="wed.jpg" 
           alt="Luxury Experience" 
           style={{ width: "45%", borderRadius: "10px" }} 
         />
         <img 
-          src="home.jpg" 
+          src="air.webp" 
           alt="Luxury Experience" 
           style={{ width: "45%", borderRadius: "10px" }} 
         />
       </div>
 
-      <p style={{ fontSize: "18px", textAlign: "center", marginTop: "20px", color: "#4b5563" }}>
+      <p style={{ fontSize: "24px", fontWeight: "bold" , textAlign: "center", marginTop: "20px", color: "#4b5563" }}>
         On-time, courteous chauffeurs, personalized service, and stunning vehicles. That is what you can expect.
       </p>
 <div>
