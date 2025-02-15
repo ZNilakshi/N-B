@@ -16,13 +16,13 @@ const Home = () => {
            
 <Layout>
           <h1 style={{ fontSize: "40px", fontWeight: "bold" }}>
-            CHAUFFEURED TRANSPORTATION LIKE NO OTHER
-          </h1>
+          ELEVATE YOUR TRAVEL EXPERIENCE 
+           </h1>
           <p style={{ fontSize: "22px", margin: "20px 0" }}>
-            Professional Chauffeurs, Luxury Vehicles, and the most personalized service in the industry
+          Luxury vehicles, seamless service, and a journey tailored to your comfort.  
           </p>
           <div>
-            <button style={styles.button}>Reserve Transportation</button>
+            <button style={styles.button}>Book Your Ride</button>
           </div>
           </Layout>
 

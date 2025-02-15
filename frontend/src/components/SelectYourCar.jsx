@@ -40,7 +40,7 @@ const SelectYourCar = () => {
   return (
     <div style={styles.container}>
       <h1>SELECT YOUR CAR</h1>
-      <p>From sedan to mini bus, our vehicles accommodate 3 to 55 passengers</p>
+      <p>From sedan to mini vans, our vehicles accommodate 3 to 14 passengers</p>
 
       {isMobile ? (
         <div style={styles.mobileContainer}>

@@ -21,6 +21,7 @@ const AboutUs = () => {
 
   const imageStyle = {
     maxWidth: "100%",
+    height: "500px",
     borderRadius: "10px",
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
   };
@@ -106,7 +107,7 @@ const AboutUs = () => {
 
       {/* Second Image */}
       <div style={{ flex: "1", marginTop: "30px" }}>
-        <img src="luxury-limo.jpg" alt="Luxury Limo" style={imageStyle} />
+        <img src="home.jpg" alt="Luxury Limo" style={imageStyle} />
       </div>
     </div>
   );
