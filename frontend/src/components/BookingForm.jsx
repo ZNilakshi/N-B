@@ -4,6 +4,7 @@ import { FaTrash } from "react-icons/fa";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import { MapPin } from "lucide-react";
 import "./RideInfoForm.css";
+import Swal from "sweetalert2";
 
 
 const mapContainerStyle = {
@@ -130,20 +131,35 @@ const RideBookingForm = () => {
   const handleConfirmBooking = () => {
     let phoneError = "";
     let emailError = "";
-
+  
     if (!validatePhone(guest.phone)) {
       phoneError = "Invalid phone number (must be at least 10 digits).";
     }
     if (!validateEmail(guest.email)) {
       emailError = "Invalid email format.";
     }
-
+  
     setErrors({ phone: phoneError, email: emailError });
-
+  
     if (!phoneError && !emailError) {
-      alert("Booking confirmed!");
+      Swal.fire({
+        title: "Confirm Booking",
+        text: "Are you sure you want to confirm your booking?",
+        icon: "question",
+        showCancelButton: true,
+        confirmButtonText: "Yes, Confirm",
+        cancelButtonText: "Cancel",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire("Success!", "Booking successfully confirmed!", "success");
+        }
+    
+    
+    
+      });
     }
   };
+  
 
   return (
     <div style={{  maxWidth: "85%", margin: "auto", padding: "10px", backgroundColor: "white", boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)", borderRadius: "8px" }}>
@@ -152,8 +168,10 @@ const RideBookingForm = () => {
 {/* Step 1: Ride Info */}
 {step === 1 && (
       <>
-        <ul className="steps-navigation">
-          <li className={`step-item ${step === 1 ? "active" : ""}`}>Step 1: Ride Info</li>
+        <ul className="steps-list">
+          <li className={`step-item ${step === 1 ? "active" : ""}`}> 
+            <span className="step-circle"></span> Step 1: Ride Info
+          </li>
         </ul>
 
         <div className={isDesktop ? "form-container desktop" : "form-container mobile"}>
@@ -209,11 +227,15 @@ const RideBookingForm = () => {
         </div>
 
         <button onClick={handleSelectVehicle} className="next-button">Select Vehicle</button>
-        <ul className="steps-navigation">
-          <li className={`step-item ${step === 2 ? "active" : ""}`}>Step 2: Select Vehicle</li>
-             </ul>
-        <ul className="steps-navigation">
-              <li className={`step-item ${step === 3 ? "active" : ""}`}>Step 3: Final Details</li>
+        <ul className="steps-list">
+          <li className={`step-item active-bold ${step === 2 ? "active" : ""}`}>
+            <span className="step-circle"></span> Step 2: Select Vehicle
+          </li>
+        </ul>
+        <ul className="steps-list">
+          <li className={`step-item ${step === 3 ? "active" : ""}`}>
+            <span className="step-circle"></span> Step 3: Final Details
+          </li>
         </ul>
       </>
     )}
@@ -269,9 +291,11 @@ const RideBookingForm = () => {
       {/* Step 3: Final Details */}
       {step === 3 && (
   <>
-    <ul className="steps">
-      <li className={`step-item ${step === 1 ? 'active' : ''}`}>Step 1: Ride Info</li>
-    </ul>
+   <ul className="steps-list">
+          <li className={`step-item ${step === 1 ? "active" : ""}`}> 
+            <span className="step-circle"></span> Step 1: Ride Info
+          </li>
+        </ul>
     
     <div className="card">
       <div className="card-header">
@@ -286,9 +310,11 @@ const RideBookingForm = () => {
       <p className="location-info">To: {dropOff}</p>
     </div>
     
-    <ul className="steps">
-      <li className={`step-item ${step === 2 ? 'active' : ''}`}>Step 2: Select Vehicle</li>
-    </ul>
+    <ul className="steps-list">
+          <li className={`step-item active-bold ${step === 2 ? "active" : ""}`}>
+            <span className="step-circle"></span> Step 2: Select Vehicle
+          </li>
+        </ul>
     
     <div className="card">
       <div className="card-header">
@@ -299,9 +325,11 @@ const RideBookingForm = () => {
       {vehicle?.img && <img src={vehicle.img} alt={vehicle.name} className="vehicle-img" />}
     </div>
     
-    <ul className="steps">
-      <li className={`step-item ${step === 3 ? 'active' : ''} final-step`}>Step 3: Final Details</li>
-    </ul>
+    <ul className="steps-list">
+          <li className={`step-item ${step === 3 ? "active" : ""}`}>
+            <span className="step-circle"></span> Step 3: Final Details
+          </li>
+        </ul>
     
     <p>Please <strong>Log In</strong> to your account or <strong>continue as guest</strong> to book your reservation.</p>
     

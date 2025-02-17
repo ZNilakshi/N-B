@@ -5,6 +5,7 @@ import HomePage from "./pages/Home"; // Adjust the path if needed
 import AboutUs from "./pages/AboutUs"; // Adjust the path if needed
 import ContactUs from "./pages/ContactUs"; // Adjust the path if needed
 import Reservation from "./pages/Reservation"; // Adjust the path if needed
+import Services from "./pages/Services"; // Adjust the path if needed
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/Reservation" element={<Reservation />} />
+        <Route path="/Services" element={<Services />} />
       
       </Routes>
     </Router>

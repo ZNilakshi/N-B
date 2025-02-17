@@ -1,3 +1,95 @@
+
+/* General Styles */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Wrapper for the forms */
+.form-wrapper {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Card Design */
+.card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+}
+
+/* Card Title */
+.card-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Error Text */
+.error-text {
+  color: red;
+  font-size: 14px;
+  margin-top: -8px;
+  text-align: left;
+}
+
+/* Buttons */
+.login-btn,
+.guest-btn {
+  width: 100%;
+  padding: 14px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.login-btn:hover,
+.guest-btn:hover {
+  background: #0056b3;
+}
+
+/* Forgot Password */
+.forgot-password {
+  color: #007bff;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+
+
 .steps-navigation {
     list-style-type: none;
     padding: 0;
