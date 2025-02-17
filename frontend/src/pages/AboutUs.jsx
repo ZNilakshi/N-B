@@ -16,13 +16,13 @@ const AboutUs = () => {
         <h1 style={{ fontSize: "55px", fontWeight: "bold", textAlign: "center" }}>
           ABOUT US
         </h1>
-        <p style={{ fontSize: "23x" , fontWeight: "bold", margin: "20px 0", textAlign: "center" }}>
-          We provide luxury Car services with high-quality vehicles and professional drivers.
+        <p style={{ fontSize: "30px" , fontWeight: "bold", margin: "20px 0", textAlign: "center" }}>
+          We provide luxury Car services with high-quality vehicles and professional drivers
         </p>
       </Layout>
 
       <h1 style={{ fontSize: "36px", fontWeight: "bold", textAlign: "center" }}>
-        <span style={{ color: "#facc15" }}>For the past 25 years</span> we have provided service{" "}
+        <span style={{ color: "#99001c" }}>For the past 25 years</span> we have provided service{" "}
         <span style={{ color: "#1e3a8a" }}>that is incomparable.</span>
       </h1>
 
@@ -133,7 +133,7 @@ const AboutUs = () => {
         />
       </div>
 
-      <p style={{ fontSize: "24px", fontWeight: "bold" , textAlign: "center", marginTop: "20px", color: "#4b5563" }}>
+      <p style={{ fontSize: "24px", fontWeight: "bold" , textAlign: "center", marginTop: "20px", color: "#99001c" }}>
         On-time, courteous chauffeurs, personalized service, and stunning vehicles. That is what you can expect.
       </p>
 <div>

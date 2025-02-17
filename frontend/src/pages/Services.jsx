@@ -2,12 +2,23 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Layout from "../components/Layout";
 import { motion } from "framer-motion";
+import Footer from "../components/Footer";
 
 const places = [
   {
+    name: "Badulla",
+    thumbnail: "badulla3.jpg",
+    size: "Medium",
+    images: [
+      "badulla1.webp",
+      "badulla2.webp",
+      "badulla.jpg"
+    ]
+  },
+  {
     name: "Polonnaruwa",
     thumbnail: "polonnaruwa.jpg",
-    size: "small",
+    size: "Large",
     images: [
       "polonnaruwa3.jpg",
       "polonnaruwa2.jpg",
@@ -15,29 +26,19 @@ const places = [
     ]
   },
   {
-    name: "New York",
-    thumbnail: "air.webp",
+    name: "Kandy",
+    thumbnail: "kandy.jpg",
     size: "large",
     images: [
-      "https://source.unsplash.com/800x600/?statue-of-liberty",
-      "https://source.unsplash.com/800x600/?times-square",
-      "https://source.unsplash.com/800x600/?central-park"
-    ]
-  },
-  {
-    name: "Tokyo",
-    thumbnail: "ho.jpg",
-    size: "medium",
-    images: [
-      "https://source.unsplash.com/800x600/?shibuya",
-      "https://source.unsplash.com/800x600/?mt-fuji",
-      "https://source.unsplash.com/800x600/?tokyo-tower"
+      "kandy1.jpg",
+      "kandy2.jpg",
+      "kandy3.jpg"
     ]
   },
   {
     name: "Mirissa",
     thumbnail: "mirissa.jpg",
-    size: "medium",
+    size: "Medium",
     images: [
       "mirissa1.jpg",
       "mirissa2.jpg",
@@ -45,85 +46,112 @@ const places = [
     ]
   },
   {
-    name: "Tokyo",
-    thumbnail: "hoo.jpg",
+    name: "Matara",
+    thumbnail: "matara.jpg",
     size: "medium",
     images: [
-      "https://source.unsplash.com/800x600/?shibuya",
-      "https://source.unsplash.com/800x600/?mt-fuji",
-      "https://source.unsplash.com/800x600/?tokyo-tower"
+      "matara1.jpg",
+      "matara2.jpg",
+      "matara3.jpg"
     ]
   },
   {
-    name: "London",
-    thumbnail: "homm.jpg",
-    size: "small",
+    name: "Badulla",
+    thumbnail: "badulla3.jpg",
+    size: "Medium",
     images: [
-      "https://source.unsplash.com/800x600/?big-ben",
-      "https://source.unsplash.com/800x600/?london-eye",
-      "https://source.unsplash.com/800x600/?tower-bridge"
+      "badulla1.webp",
+      "badulla2.webp",
+      "badulla.jpg"
     ]
   },
+ 
+ 
   {
-    name: "Paris",
-    thumbnail: "home.avif",
+    name: "Nuwara Eliya",
+    thumbnail: "nuwaraeliya.jpg",
+    size: "medium",
+    images: [
+      "nuwaraeliya1.jpg",
+      "nuwaraeliya2.jpg",
+      "nuwaraeliya3.jpg",
+    ]
+  },
+  
+  {
+    name: "Galle",
+    thumbnail: "galle.jpg",
     size: "large",
     images: [
-      "https://source.unsplash.com/800x600/?eiffel-tower",
-      "https://source.unsplash.com/800x600/?louvre",
-      "https://source.unsplash.com/800x600/?notre-dame"
+      "galle1.jpg",
+      "galle3.jpg"
     ]
   },
+  
+  
   {
-    name: "New York",
-    thumbnail: "air.webp",
-    size: "medium",
-    images: [
-      "https://source.unsplash.com/800x600/?statue-of-liberty",
-      "https://source.unsplash.com/800x600/?times-square",
-      "https://source.unsplash.com/800x600/?central-park"
-    ]
-  },
-  {
-    name: "Tokyo",
-    thumbnail: "ho.jpg",
-    size: "small",
-    images: [
-      "https://source.unsplash.com/800x600/?shibuya",
-      "https://source.unsplash.com/800x600/?mt-fuji",
-      "https://source.unsplash.com/800x600/?tokyo-tower"
-    ]
-  },
-  {
-    name: "London",
-    thumbnail: "hom.png",
-    size: "medium",
-    images: [
-      "https://source.unsplash.com/800x600/?big-ben",
-      "https://source.unsplash.com/800x600/?london-eye",
-      "https://source.unsplash.com/800x600/?tower-bridge"
-    ]
-  },
-  {
-    name: "Tokyo",
-    thumbnail: "hoo.jpg",
-    size: "small",
-    images: [
-      "https://source.unsplash.com/800x600/?shibuya",
-      "https://source.unsplash.com/800x600/?mt-fuji",
-      "https://source.unsplash.com/800x600/?tokyo-tower"
-    ]
-  },
-  {
-    name: "London",
-    thumbnail: "homm.jpg",
+    name: "Ella",
+    thumbnail: "ella.jpg",
     size: "large",
     images: [
-      "https://source.unsplash.com/800x600/?big-ben",
-      "https://source.unsplash.com/800x600/?london-eye",
-      "https://source.unsplash.com/800x600/?tower-bridge"
+      "ella1.jpg",
+      "ella2.jpg",
+      "ella3.jpg"
     ]
-  }
+  },
+  {
+    name: "Galle",
+    thumbnail: "galle.jpg",
+    size: "large",
+    images: [
+      "galle1.jpg",
+      "galle3.jpg"
+    ]
+  },
+  
+  
+  {
+    name: "Ella",
+    thumbnail: "ella.jpg",
+    size: "Medium",
+    images: [
+      "ella1.jpg",
+      "ella2.jpg",
+      "ella3.jpg"
+    ]
+  },
+  {
+    name: "Ambuluwawa",
+    thumbnail: "ambuluwawa.jpg",
+    size: "large",
+    images: [
+      "ambuluwawa1.jpg",
+      "ambuluwawa2.jpg",
+      "ambuluwawa3.jpg",
+    ]
+  },
+  
+  
+  {
+    name: "Sigiriya Rock",
+    thumbnail: "seegiriys.jpg",
+    size: "large",
+    images: [
+      "seegiriya1.webp",
+      "seegiriya2.jpg",
+      "seegiriya3.jpg"
+    ]
+  },
+  {
+    name: "Nuwara Eliya",
+    thumbnail: "nuwaraeliya.jpg",
+    size: "large",
+    images: [
+      "nuwaraeliya1.jpg",
+      "nuwaraeliya2.jpg",
+      "nuwaraeliya3.jpg",
+    ]
+  },
 ];
 export default function Home() {
   const [selectedPlace, setSelectedPlace] = useState(null);
@@ -257,6 +285,9 @@ const handleBookRide = () => {
     </motion.div>
         </div>
       )}
+      <div>
+        <Footer />
+      </div>
     </>
   );
 }

@@ -83,7 +83,8 @@ const Testimonials = () => {
         </div>
       </div>
 
-      {/* Add Review Button */}
+      {/* Add Review Button
+    
       <button
         style={{
           marginTop: "30px",
@@ -101,6 +102,7 @@ const Testimonials = () => {
       >
         Add Your Review
       </button>
+      */}
     </div>
   );
 };
