@@ -3,17 +3,14 @@ import Layout from "../components/Layout";
 import SelectYourCar from "../components/SelectYourCar";
 import About from "../components/About";
 import Footer from "../components/Footer";
+import Service from "../components/Service";
 
 const Home = () => {
  
 
   return (
     <div>
-      
-      
-
          
-           
 <Layout>
           <h1 style={{ fontSize: "53px",  fontWeight: "bold"   ,}}>
           ELEVATE YOUR TRAVEL EXPERIENCE 
@@ -39,6 +36,7 @@ const Home = () => {
         </div>
       </div>
       <div >
+        <Service />
         <SelectYourCar/>
         <About />
         <Footer />

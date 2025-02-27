@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
     <div>
       <div
         style={{
-          backgroundImage: "url('neww.jpg')",
+          backgroundImage: "url('backk.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "100vh",
@@ -43,7 +43,7 @@ const Layout = ({ children }) => {
             <nav style={styles.navbarDesktop}>
               <Link to="/" style={getLinkStyle("/")}>HOME</Link>
               <Link to="/AboutUs" style={getLinkStyle("/AboutUs")}>ABOUT US</Link>
-              <Link to="/Services" style={getLinkStyle("/Services")}>OUR FLEET</Link>
+              <Link to="/Services" style={getLinkStyle("/Services")}>SERVICES</Link>
               <Link to="/Reservation" style={getLinkStyle("/Reservation")}>RESERVATION</Link>
               <Link to="/ContactUs" style={getLinkStyle("/ContactUs")}>CONTACT US</Link>
             </nav>
@@ -54,7 +54,7 @@ const Layout = ({ children }) => {
                 <nav style={styles.navbarMobile}>
                   <Link to="/" style={getLinkStyle("/")}>HOME</Link>
                   <Link to="/AboutUs" style={getLinkStyle("/AboutUs")}>ABOUT US</Link>
-                  <Link to="/Services" style={getLinkStyle("/Services")}>OUR FLEET</Link>
+                  <Link to="/Services" style={getLinkStyle("/Services")}>SERVICES</Link>
                   <Link to="/Reservation" style={getLinkStyle("/Reservation")}>RESERVATION</Link>
                   <Link to="/ContactUs" style={getLinkStyle("/ContactUs")}>CONTACT US</Link>
                 </nav>

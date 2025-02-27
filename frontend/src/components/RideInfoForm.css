@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f4f4f4;
+  background-color: #ffffff;
   font-family: Arial, sans-serif;
   padding: 20px;
 }
@@ -20,7 +20,7 @@
 
 /* Card Design */
 .card {
-  background: #fff;
+  background: #e3e3e3;
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -37,7 +37,7 @@
 
 /* Input Fields */
 .input {
-  width: 100%;
+  width: 85%;
   padding: 12px;
   margin: 10px 0;
   border: 1px solid #ccc;
@@ -127,6 +127,7 @@
   
   .map-section {
     width: 100%;
+    height:auto;
   }
   
   .form-label {
@@ -137,7 +138,16 @@
     margin-top: 10px;
   }
   
-  .form-input,
+  .form-input {
+    width: 95%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    font-size: 17px;
+    border: 1px solid #ccc;
+  }
+  
+  
   .form-select {
     width: 100%;
     padding: 10px;
@@ -146,7 +156,6 @@
     font-size: 17px;
     border: 1px solid #ccc;
   }
-  
   .input-group {
     display: flex;
     gap: 10px;
@@ -173,7 +182,7 @@
     background: none;
     border: none;
     cursor: pointer;
-    color: red;
+    color: black;
   }
   
   .error-message {
@@ -182,7 +191,7 @@
   }
   
   .next-button {
-    width: 70%;
+    width: 50%;
     margin-top: 20px;
     background-color: #007bff;
     color: white;
@@ -192,33 +201,50 @@
     cursor: pointer;
     font-size: 16px;
   }
-  
-  .steps-list {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .step-item {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-  
-  .step-circle {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #ccc;
+  .steps-container {
+    background-color: #f8f9fa; /* Light gray background */
+    border: 1px solid #ddd; /* Light gray border */
     display: inline-block;
-  }
-  
-  .step-item.active .step-circle {
-    background-color: #007bff;
-  }
-  
+    width: 100%;
+}
+  /* Step Indicator List */
+.steps-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Individual Step Item */
+.step-item {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #007bff;
+  padding: 10px;
+}
+
+/* Circle Indicator */
+.step-circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #007bff;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+/* Active Step */
+.step-item.active {
+  font-weight: bold;
+  color: #0056b3;
+}
+
+.step-item.active .step-circle {
+  background-color: #007bff;
+}
+
   .active-bold {
     font-weight: bold;
     font-size: 18px;
@@ -248,6 +274,12 @@
     display: flex;
     align-items: center;
     gap: 8px;
+  }
+  .row-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
   }
   
   .vehicle-container {

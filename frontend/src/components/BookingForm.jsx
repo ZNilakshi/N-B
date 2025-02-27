@@ -29,7 +29,6 @@ const RideBookingForm = () => {
   const [markers, setMarkers] = useState([]);
   const [errors, setErrors] = useState({});
   const [vehicle, setVehicle] = useState(null);
-  const [login, setLogin] = useState({ email: "", password: "" });
   const [guest, setGuest] = useState({ firstName: "", lastName: "", phone: "", email: "" });
 
 
@@ -115,10 +114,7 @@ const RideBookingForm = () => {
     setVehicle(selectedVehicle);
     setStep(3);
   };
-  const handleLogin = () => {
-    // Implement login functionality here
-    console.log("Logging in with:", login);
-  };
+  
 
   const validatePhone = (phone) => {
     return /^[0-9]{10,}$/.test(phone);
@@ -162,18 +158,19 @@ const RideBookingForm = () => {
   
 
   return (
-    <div style={{  maxWidth: "85%", margin: "auto", padding: "10px", backgroundColor: "white", boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)", borderRadius: "8px" }}>
+    <div style={{  maxWidth: "80%", margin: "auto", padding: "15px", backgroundColor: "white", boxShadow: "0 0 10px rgba(117, 46, 46, 0.1)", borderRadius: "18px" }}>
      
 
 {/* Step 1: Ride Info */}
 {step === 1 && (
       <>
+      <div className="steps-container">
         <ul className="steps-list">
           <li className={`step-item ${step === 1 ? "active" : ""}`}> 
             <span className="step-circle"></span> Step 1: Ride Info
           </li>
         </ul>
-
+        </div>
         <div className={isDesktop ? "form-container desktop" : "form-container mobile"}>
           <div className="form-section">
             <label className="form-label">Select Service Type</label>
@@ -252,7 +249,7 @@ const RideBookingForm = () => {
         
         <div className="info-box">
           <div className="info-header">
-            <h3></h3>
+           <h3></h3>
             <button onClick={() => setStep(1)} className="edit-button">Edit</button>
           </div>
           <p>{date} {time}</p>
@@ -297,8 +294,8 @@ const RideBookingForm = () => {
           </li>
         </ul>
     
-    <div className="card">
-      <div className="card-header">
+    <div className="info-box">
+      <div className="info-header">
         <h3></h3>
         <button onClick={() => setStep(1)} className="edit-btn">Edit</button>
       </div>
@@ -316,8 +313,8 @@ const RideBookingForm = () => {
           </li>
         </ul>
     
-    <div className="card">
-      <div className="card-header">
+    <div className="info-box">
+      <div className="info-header">
         <h3></h3>
         <button onClick={() => setStep(2)} className="edit-btn">Edit</button>
       </div>
@@ -333,15 +330,9 @@ const RideBookingForm = () => {
     
     <p>Please <strong>Log In</strong> to your account or <strong>continue as guest</strong> to book your reservation.</p>
     
-    <div className="container">
+ 
       <div className="form-wrapper">
-        <div className="card">
-          <h3 className="card-title">Log In to Your Account</h3>
-          <input type="text" placeholder="Email Address / Username" value={login.email} onChange={(e) => setLogin({ ...login, email: e.target.value })} className="input" />
-          <input type="password" placeholder="Password" value={login.password} onChange={(e) => setLogin({ ...login, password: e.target.value })} className="input" />
-          <p className="forgot-password">Forgot password?</p>
-          <button onClick={handleLogin} className="login-btn">Log In</button>
-        </div>
+        
         
         <div className="card">
           <h3 className="card-title">Continue as Guest</h3>
@@ -353,7 +344,7 @@ const RideBookingForm = () => {
           {errors.email && <p className="error-text">{errors.email}</p>}
           <button onClick={handleConfirmBooking} className="guest-btn">Continue as Guest</button>
         </div>
-      </div>
+      
     </div>
   </>
 )}
